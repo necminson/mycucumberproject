@@ -14,13 +14,13 @@ public class GoogleStepDefs {
     @Given("user is on the google home page")
     public void user_is_on_the_google_home_page() {
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
+        //If there is a pop up on google clicking
+        /*
         try{
-            googlePage.popUpAccept.click();//If there is a pop up on google clicking
+            googlePage.popUpAccept.click();
         }catch (Exception e){
-
+        */
         }
-
-    }
     @Given("user search for iPhone")
     public void user_search_for_i_phone() {
         googlePage.searchBox.sendKeys("iPhone"+ Keys.ENTER);
@@ -28,10 +28,6 @@ public class GoogleStepDefs {
     @Then("verify the page title contains iPhone")
     public void verify_the_page_title_contains_i_phone() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("iPhone"));
-    }
-    @Then("close the application")
-    public void close_the_application() {
-        Driver.closeDriver();
     }
     @Given("user search for porcelain_tea_pot")
     public void user_search_for_porcelain_tea_pot() {
@@ -41,16 +37,9 @@ public class GoogleStepDefs {
     public void verify_the_page_title_contains_porcelain_tea_pot() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("porcelain_tea_pot"));
     }
-    @Given("user navigates to {string}")
-    public void user_navigates_to(String string) {
-       Driver.getDriver().get(string);
-    }
-    @Given("user search for {string}")
+       @Given("user search for {string}")
     public void user_search_for(String string) {
        googlePage.searchBox.sendKeys(string+Keys.ENTER);
     }
-    @Then("verify the page title contains {string}")
-    public void verify_the_page_title_contains(String string) {
-     Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
-    }
+
 }
