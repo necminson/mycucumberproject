@@ -11,9 +11,12 @@ Feature: new_user
 
 
     Examples: user_data
-      | firstname | lastname | position  | office | extension | startDate  | salary |
-      | Ali       | Desidero | Baba      | Home   | 157       | 2023-05-18 | 1000   |
-      | Apolos    | Topolos  | physician | tesla  | 123       | 2023-01-29 | 3000   |
+      | firstname | lastname | position | office     | extension | startDate  | salary |
+      | Alice     | Mark     | Teacher  | Miami      | 12        | 2023-05-18 | 1000   |
+      | Bruce     | Lee      | Kung Fu  | Here After | 14        | 2023-01-29 | 3000   |
+      | Ayse      | Kalem    | Doctor   | Istanbul   | 15        | 2021-03-01 | 9000   |
+      | Mansur    | Bekcanov | Engineer | Tashkent   | 13        | 2013-04-13 | 1500   |
+      | Ertan     | Kara     | Academic | Ankara     | 11        | 2022-12-12 | 1300   |
 
 
 

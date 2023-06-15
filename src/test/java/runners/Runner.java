@@ -9,14 +9,15 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "html:target/default-cucumber-reports.html",
                 //"json:target/json-reports/cucumber.json",
-                //"junit:target/xml-report/cucumber.xml"
+                //"junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt"
         },
         monochrome = true,
         features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
-        glue = "stepdefinitions", //PATH OF STEPDEFINITIONS FOLDER
+        glue = {"stepdefinitions","hooks"}, //PATH OF STEPDEFINITIONS FOLDER
         dryRun = false , //dryRun = true : RUNS AND GENERATES ONLY MISSING STEP DEFS.
                         // dryRun = false: RUN NORMAL. THIS IS DEFAULT VALUE
-        tags = "@creation_new_user"
+        tags = "@failed_test_case"
 
 )
 public class Runner {
