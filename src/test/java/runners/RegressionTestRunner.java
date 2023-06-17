@@ -14,11 +14,11 @@ import org.junit.runner.RunWith;
         },
         monochrome = true,
         features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
-        glue = {"stepdefinitions","hooks"}, //PATH OF STEPDEFINITIONS FOLDER
+        glue = {"stepdefinitions"}, //PATH OF STEPDEFINITIONS FOLDER
         dryRun = false , //dryRun = true : RUNS AND GENERATES ONLY MISSING STEP DEFS.
-                        // dryRun = false: RUN NORMAL. THIS IS DEFAULT VALUE
-        tags = "@excel_admin"
+        // dryRun = false: RUN NORMAL. THIS IS DEFAULT VALUE
+        tags = "@regression_test_runner"
 
 )
-public class Runner {
+public class RegressionTestRunner {
 }

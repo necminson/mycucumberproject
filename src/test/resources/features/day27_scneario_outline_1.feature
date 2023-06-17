@@ -1,4 +1,4 @@
-@scenario_outline_1
+@scenario_outline_1 @smoke_test_runner
 Feature: search_feature
   Background: goes_to_google
     Given user navigates to "https://www.google.com"
