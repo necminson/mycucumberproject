@@ -1,0 +1,23 @@
+*****selenium grid notes*****
+Official Documentation : https://www.selenium.dev/documentation/grid/getting_started/
+-----Installation Steps:-----
+1. Prerequisites:
+*Java 11 or higher installed
+*Browser(s) installed
+*Browser driver(s)
+*Download the Selenium Server jar file from the latest release -NOT DONE YET
+2. Create a folder under project  :  SeleniumServer
+3. * Download the selenium server :  https://www.selenium.dev/downloads/
+   * Download the chrome driver   :  https://chromedriver.chromium.org/downloads
+   * Download the firefox driver  :  https://github.com/mozilla/geckodriver/releases
+   NOTE: move those files in the SeleniumServer folder then UNZIP
+-----run the grid----
+4. Open terminal(MAC) or CMD(WINDOWS) and change directory to the SeleniumServer folder
+   To find the path : right click on the SeleniumServer folder > copy path/reference > copy absolute path
+   To change directory : cd path_of_SeleniumServer folder
+   For me : cd /Users/techproed/IdeaProjects/mycucumberproject/SeleniumServer
+5. Run the grid standalone server
+    java -jar selenium-server-4.10.0.jar standalone
+   Then you should see this message : Started Selenium Standalone 4.10.0 (revision c14d967899): http://192.168.1.66:4444
+
+   Now the hub and node runs and we are able to run the tests on grid....
