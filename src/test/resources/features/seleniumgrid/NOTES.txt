@@ -17,7 +17,17 @@ Official Documentation : https://www.selenium.dev/documentation/grid/getting_sta
    To change directory : cd path_of_SeleniumServer folder
    For me : cd /Users/techproed/IdeaProjects/mycucumberproject/SeleniumServer
 5. Run the grid standalone server
-    java -jar selenium-server-4.10.0.jar standalone
+   --->>>  java -jar selenium-server-4.10.0.jar standalone
    Then you should see this message : Started Selenium Standalone 4.10.0 (revision c14d967899): http://192.168.1.66:4444
-
    Now the hub and node runs and we are able to run the tests on grid....
+   To close the server : Control + c
+   To start the server : java -jar selenium-server-4.10.0.jar standalone
+   To start the server WIND 4.8.0 : java -jar selenium-server-4.8.0.jar standalone
+TROUBLESHOOTING :
+   NOTES : if 4.10.0 is not working
+   1. put 4.8.0 in SeleniumServer folder
+   2. in your terminal close the previous session (Control +C)
+   3. run this on the terminal : java -jar selenium-server-4.8.0.jar standalone
+   4. run your runner one more time
+6. Create feature a new feature file:
+   grid_test_case.feature
