@@ -4,3 +4,10 @@ Feature: grid_feature
   Scenario: TC01_test_case_on_chrome
     Given user is on the "https://www.amazon.com" url on "chrome" browser
     Then verify the page title contains "Amazon" on grid
+    Then close the remote driver
+
+    @gird_firefox
+    Scenario: TC01_test_case_on_firefox
+      Given user is on the "https://www.amazon.com" url on "firefox" browser
+      Then verify the page title contains "Amazon" on grid
+      Then close the remote driver
