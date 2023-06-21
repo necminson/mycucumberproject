@@ -18,7 +18,7 @@ public class GridStepDefs {
     @Given("user is on the {string} url on {string} browser")
     public void user_is_on_the_url_on_browser(String url, String browser) throws MalformedURLException {
     // This is remote grid URL
-      URL remoteURL = new URL("http://172.20.10.2:4444");
+      URL remoteURL = new URL("http://192.168.1.33:4444");
       if (browser.equalsIgnoreCase("chrome")){
           driver = new RemoteWebDriver(remoteURL,new ChromeOptions());
           driver.manage().window().maximize();
@@ -30,6 +30,11 @@ public class GridStepDefs {
           driver.manage().window().maximize();
           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
+      } else if (browser.equalsIgnoreCase("edge")) {
+          // instantiating remote firefox driver
+          driver = new RemoteWebDriver(remoteURL,new EdgeOptions());
+          driver.manage().window().maximize();
+          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
       }
         // going to url
       driver.get(url);
