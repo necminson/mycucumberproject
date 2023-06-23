@@ -4,8 +4,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.GooglePage;
-import utilities.ConfigReader;
-import utilities.Driver;
+
 public class GoogleStepDefs {
     //    Note we are not going to use @Test to create test cases anymore
     //    Cucumber created test methods using gherkin and java
