@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 21, 2023 03:25:42 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 24, 2023 06:26:32 PM</span></a>
 </li>
 </ul>
 </div>
@@ -57,11 +57,6 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -71,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 21, 2023 03:25:42 AM</h3>
+<h3>Jun 24, 2023 06:26:32 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 21, 2023 03:26:56 AM</h3>
+<h3>Jun 24, 2023 06:26:39 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -148,9 +143,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'><b>1</b> steps passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
 <div>
-<small data-tooltip='33%'><b>1</b> steps failed,
+<small data-tooltip='50%'><b>1</b> steps failed,
 <b>1</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -167,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"grid_feature":71.735
+"db_testing":0.153
 };
 </script>
 <div class="row">
@@ -177,15 +172,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@grid</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>@grid_chrome</td>
+<td>@jdbc</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -226,7 +213,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 1,
+passGrandChild: 0,
 failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 1,
@@ -251,7 +238,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@grid</a><a class="dropdown-item" href="#">@grid_chrome</a>
+<a class="dropdown-item" href="#">@jdbc</a>
 </ul>
 </li>
 </ul>
@@ -262,9 +249,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">grid_feature</p>
+            <p class="name">db_testing</p>
             <p class="text-sm">
-              <span>3:25:44 AM</span> / <span>00:01:11:735</span>
+              <span>6:26:39 PM</span> / <span>00:00:00:153</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -272,10 +259,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">grid_feature</h5>
-<span class='badge badge-success'>06.21.2023 3:25:44 AM</span>
-<span class='badge badge-danger'>06.21.2023 3:26:56 AM</span>
-<span class='badge badge-default'>00:01:11:735</span>
+<h5 class="test-status text-fail">db_testing</h5>
+<span class='badge badge-success'>06.24.2023 6:26:39 PM</span>
+<span class='badge badge-danger'>06.24.2023 6:26:39 PM</span>
+<span class='badge badge-default'>00:00:00:153</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -287,59 +274,19 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>TC01_test_case_on_chrome</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>TC01_read_customer_login_information</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="stepdefinitions.GridStepDefs.user_is_on_the_url_on_browser(java.lang.String,java.lang.String)">
-                <span>Given user is on the "https://www.amazon.com" url on "chrome" browser</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Timed out waiting for driver process to start.
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
-Driver info: driver.version: unknown 
-Host info: host: 'MATHEMADX', ip: '172.20.10.2'
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
-Driver info: driver.version: unknown
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}]}]
-Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:154)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:134)
-	at stepdefinitions.GridStepDefs.user_is_on_the_url_on_browser(GridStepDefs.java:21)
-	at ✽.user is on the "https://www.amazon.com" url on "chrome" browser(file:///D:/Java%20Dersleri/TimeToLearnJava/mycucumberproject/./src/test/resources/features/seleniumgrid/day33_grid_test_case.feature:5)
-</textarea>
-      
+              <div class="step fail-bg" >
+                <span>Given user connects to the application database</span>
+      <div>Step undefined
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.GridStepDefs.verify_the_page_title_contains_on_grid(java.lang.String)">
-                <span>Then verify the page title contains "amazon" on grid</span>
+              <div class="step skip-bg" >
+                <span>And user gets the column "id" from the table "jhi_user"</span>
       <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>screenshots
-          <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='../embedded1.png' src="../embedded1.png">
-    
-    </div></div>
-</div>
-      <div>
       </div>
               </div>
           </div>
@@ -361,94 +308,6 @@ Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-or
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@grid</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@grid</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>03:25:45 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_test_case_on_chrome</a>
-<div class="">
-<span class="badge badge-default">grid_feature.TC01_test_case_on_chrome</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@grid_chrome</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@grid_chrome</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>03:25:45 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_test_case_on_chrome</a>
-<div class="">
-<span class="badge badge-default">grid_feature.TC01_test_case_on_chrome</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
 <ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
@@ -458,12 +317,12 @@ Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-or
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.SessionNotCreatedException</p>
+<p class="name">@jdbc</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.SessionNotCreatedException</h4>
+<h4>@jdbc</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -477,11 +336,11 @@ Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-or
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>03:25:45 AM</td>
+<td>18:26:39 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='4'>Given user is on the "https://www.amazon.com" url on "chrome" browser</a>
+<a href="#" class="linked" test-id='1' id='2'>TC01_read_customer_login_information</a>
 <div class="">
-<span class="badge badge-default">grid_feature.TC01_test_case_on_chrome.Given user is on the "https://www.amazon.com" url on "chrome" browser</span>
+<span class="badge badge-default">db_testing.TC01_read_customer_login_information</span>
 </div>
 </td>
 </tr>
